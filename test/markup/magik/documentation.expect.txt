@@ -1,0 +1,5 @@
+<span class="hljs-doctag">## documentation</span>
+
+<span class="hljs-doctag">## multi</span>
+<span class="hljs-doctag">## line</span>
+<span class="hljs-doctag">## documentation</span>

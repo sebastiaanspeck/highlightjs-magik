@@ -1,0 +1,12 @@
+:symbol
+:boolean?
+:kleenean??
+:int!internal
+:|piped|
+:int|!|internal
+:new|()|
+:|A|b|c ||()|
+:_new
+:|=|
+:|new world|
+:||

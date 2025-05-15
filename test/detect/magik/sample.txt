@@ -1,4 +1,4 @@
-/* Highlight.js test for some new your-language */
+/* Highlight.js test for some new Magik */
 
 function myFunction(parameter) {
     assign var = 1234 + otherbuiltin(void)

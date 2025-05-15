@@ -1,21 +1,21 @@
 {
-  "name": "highlightjs-your-language",
-  "version": "0.1.0",
-  "author": "John Foster",
+  "name": "highlightjs-magik",
+  "version": "0.0.1",
+  "author": "Sebastiaan Speck",
   "description": "A new language template set up when creating a language definition for highlightjs",
-  "main": "src/languages/your-language.js",
+  "main": "src/languages/magik.js",
   "scripts": {
     "test": "jasmine"
   },
   "files": [
-    "src/languages/your-language.js"
+    "src/languages/magik.js"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/jf990/highlightjs-language-template.git"
+    "url": "https://github.com/sebastiaanspeck/highlightjs-magik.git"
   },
   "keywords": [
-    "your-language",
+    "magik",
     "javascript",
     "highlight",
     "highlight.js",
@@ -23,13 +23,16 @@
     "syntax",
     "template"
   ],
-  "license": "BSD-3-Clause",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jf990/highlightjs-language-template/issues"
+    "url": "https://github.com/sebastiaanspeck/highlightjs-magik/issues"
   },
-  "homepage": "https://github.com/jf990/highlightjs-language-template",
+  "homepage": "https://github.com/sebastiaanspeck/highlightjs-magik",
   "devDependencies": {
-    "highlight.js": "^10.7.1",
-    "jasmine": "^3.7.0"
+    "highlight.js": "^11.11.1",
+    "jasmine": "^5.7.1"
+  },
+  "dependencies": {
+    "ci": "^2.3.0"
   }
 }

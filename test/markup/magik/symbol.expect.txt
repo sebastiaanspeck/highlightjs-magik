@@ -1,0 +1,12 @@
+<span class="hljs-symbol">:symbol</span>
+<span class="hljs-symbol">:boolean?</span>
+<span class="hljs-symbol">:kleenean??</span>
+<span class="hljs-symbol">:int!internal</span>
+<span class="hljs-symbol">:|piped|</span>
+<span class="hljs-symbol">:int|!|internal</span>
+<span class="hljs-symbol">:new|()|</span>
+<span class="hljs-symbol">:|A|b|c ||()|</span>
+<span class="hljs-symbol">:_new</span>
+<span class="hljs-symbol">:|=|</span>
+<span class="hljs-symbol">:|new world|</span>
+<span class="hljs-symbol">:||</span>

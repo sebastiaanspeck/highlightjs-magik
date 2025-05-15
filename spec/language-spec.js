@@ -1,50 +1,53 @@
 /**
- * Jasmine test spec. Use `npm test` to run this.
- * It is expected you will change "language" to match your language and update
- * the tests and test data for your language requirements.
+ * Unit test for highlight grammar:
+ * - verifies language is loaded via highlightjs core
+ * - verifies expected version
+ * - verifies expected highlight grammar
  */
 const hljs = require("highlight.js/lib/core");
-const language = require("../src/languages/your-language");
+const magik = require("../src/languages/magik");
 const fs = require("fs");
 const path = require("path");
-const languageName = "your-language";
-const testFileSourcePath = "../test/markup/" + languageName + "/sample.txt";
-const testFileExpectedPath = "../test/markup/" + languageName + "/sample.expect.txt";
-hljs.registerLanguage(languageName, language);
+
+const languageName = "magik";
+const testSourcePath = path.resolve(__dirname, "../test/markup/", languageName);
+
+hljs.registerLanguage(languageName, magik);
 
 describe("highlight " + languageName, () => {
-  it("defines your-language", () => {
-
-    // highlight has language defined
-    const language = hljs.getLanguage(languageName);
-    expect(language).toBeDefined();
+  it("defines " + languageName, () => {
+    // highlight has Magik defined
+    const hljsMagik = hljs.getLanguage(languageName);
+    expect(hljsMagik).not.toBe(null);
   });
 
-  it ("highlights language string", () => {
-    const string = "assign false builtin";
-    const expected = '<span class="hljs-keyword">assign</span> <span class="hljs-literal">false</span> <span class="hljs-built_in">builtin</span>';
-    const result = hljs.highlight(string, { language: languageName, ignoreIllegals: true });
-    expect(result.language).toBe(languageName);
-    expect(result.value).toBe(expected);
-  });
+  const testFiles = fs.readdirSync(testSourcePath)
+    .filter(file => file.endsWith(".txt") && !file.endsWith(".expect.txt"))
+    .map(file => path.basename(file, ".txt"));
 
-  it("highlights language file", () => {
+  testFiles.forEach((file) => {
+    it(`highlights file '${file}.txt' correctly`, () => {
+      const testFileSourcePath = path.join(testSourcePath, file + ".txt");
+      const testFileExpectedPath = path.join(testSourcePath, file + ".expect.txt");
 
-    // read the test data
-    const input = fs.readFileSync(
-      path.resolve(__dirname, testFileSourcePath),
-      "utf-8"
-    );
+      // Read the test input
+      const sample = fs.readFileSync(
+        path.resolve(__dirname, testFileSourcePath),
+        "utf-8"
+      );
 
-    // highlight the test data
-    const result = hljs.highlight(input, { language: languageName, ignoreIllegals: true });
-    expect(result.language).toBe(languageName);
+      // Highlight the input
+      const result = hljs.highlight(sample, { language: languageName, ignoreIllegals: true });
+      expect(result.language).toBe(languageName);
 
-    // verify the highlighting is what is expected
-    const expected = fs.readFileSync(
-      path.resolve(__dirname, testFileExpectedPath),
-      "utf-8"
-    );
-    expect(result.value).toBe(expected);
+      // Read the expected output
+      const expected = fs.readFileSync(
+        path.resolve(__dirname, testFileExpectedPath),
+        "utf-8"
+      );
+
+      // Compare the highlighted output to expected
+      expect(result.value).toBe(expected);
+    });
   });
 });
