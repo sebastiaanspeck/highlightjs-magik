@@ -40,7 +40,6 @@ hljs.registerLanguage("magik", hljsMagik);
 hljs.highlightAll();
 ```
 
-
 ## License
 
 Highlight.js is released under the MIT License. See [LICENSE][1] file
