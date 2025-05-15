@@ -4,21 +4,20 @@
  Author: author <author@website.com>
  Description: This is a placeholder language to be replaced by magik. Tell us what magik is all about.
 */
-module.exports = function(hljs) {
-  const ID_REGEX = /(\|\p{L}?[\p{L}\p{N}_?!]*\|)|(\p{L}[\p{L}\p{N}_?!]*)/;
 
+module.exports = function(hljs) {
   const LITERALS = [
     '_true',
     '_false',
     '_maybe',
     '_unset'
-  ]
+  ];
 
   const LANGUAGE_KEYWORDS = [
     '_self',
     '_super',
     '_clone',
-  ]
+  ];
 
   const OPERATORS = [
     '_and',
@@ -26,7 +25,7 @@ module.exports = function(hljs) {
     '_xor',
     '_andif',
     '_orif',
-  ]
+  ];
 
   const VARIABLE_KEYWORDS = [
     '_global',
@@ -37,7 +36,7 @@ module.exports = function(hljs) {
     '_optional',
     '_gather',
     '_scatter'
-  ]
+  ];
 
   const METHOD_KEYWORDS = [
     '_abstract',
@@ -45,7 +44,7 @@ module.exports = function(hljs) {
     '_iter',
     '_method',
     '_endmethod'
-  ]
+  ];
 
   const LOOP_KEYWORDS = [
     '_loop',
@@ -54,7 +53,7 @@ module.exports = function(hljs) {
     '_while',
     '_finally',
     '_endloop'
-  ]
+  ];
 
   const RETURN_OPERATOR = {
     scope: 'keyword',
@@ -62,16 +61,26 @@ module.exports = function(hljs) {
   };
 
   const KEYWORDS = {
-    keyword: [...OPERATORS, '_return'],
-    type: ['_package', '_proc', '_endproc', ...VARIABLE_KEYWORDS, ...METHOD_KEYWORDS, ...LOOP_KEYWORDS],
+    keyword: [
+ ...OPERATORS,
+'_return' 
+],
+    type: [
+ '_package',
+'_proc',
+'_endproc',
+...VARIABLE_KEYWORDS,
+...METHOD_KEYWORDS,
+...LOOP_KEYWORDS 
+],
     literal: LITERALS,
     built_in: LANGUAGE_KEYWORDS,
-  }
+  };
 
   const SYMBOL = {
     scope: 'symbol',
     begin: /:(\|[^|]*\||[\w?!]+)+/
-  }
+  };
 
   const GLOBAL_VARIABLE = {
     scope: 'variable',  // or 'variable.language' if you prefer
@@ -87,19 +96,19 @@ module.exports = function(hljs) {
     scope: 'comment',
     begin: '#',
     end: '$'
-  }
+  };
 
   const DOCUMENTATION = {
     scope: 'doctag',
     begin: '##',
     end: '$'
-  }
+  };
 
   const PRAGMA = {
     scope: 'property',
     begin: '_pragma',
     end: '$'
-  }
+  };
   return {
     name: 'Magik',
     aliases: [ 'magik' ],
@@ -118,4 +127,4 @@ module.exports = function(hljs) {
       GLOBAL_REFERENCE
     ]
   };
-}
+};

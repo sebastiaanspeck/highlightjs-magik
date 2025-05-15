@@ -5,7 +5,8 @@
   "description": "A new language template set up when creating a language definition for highlightjs",
   "main": "src/languages/magik.js",
   "scripts": {
-    "test": "jasmine"
+    "test": "jasmine",
+    "lint": "eslint src/languages/magik.js"
   },
   "files": [
     "src/languages/magik.js"
@@ -20,8 +21,7 @@
     "highlight",
     "highlight.js",
     "highlightjs",
-    "syntax",
-    "template"
+    "syntax"
   ],
   "license": "MIT",
   "bugs": {
@@ -30,9 +30,7 @@
   "homepage": "https://github.com/sebastiaanspeck/highlightjs-magik",
   "devDependencies": {
     "highlight.js": "^11.11.1",
-    "jasmine": "^5.7.1"
-  },
-  "dependencies": {
-    "ci": "^2.3.0"
+    "jasmine": "^5.7.1",
+    "eslint": "^9.26.0"
   }
 }

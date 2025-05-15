@@ -1,0 +1,5 @@
+<span class="hljs-property">_pragma(classify_level=basic)</span>
+<span class="hljs-property">_pragma(classify_level=basic, topic=highlightjs)</span>
+<span class="hljs-property">_pragma(classify_level=basic, topic={highlightjs, magik})</span>
+<span class="hljs-property">_pragma(classify_level=basic, topic={highlightjs}, usage=subclassable)</span>
+<span class="hljs-property">_pragma(classify_level=basic, topic=highlightjs, usage={redefinable, subclassable})</span>

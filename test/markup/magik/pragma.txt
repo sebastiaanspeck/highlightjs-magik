@@ -1,0 +1,5 @@
+_pragma(classify_level=basic)
+_pragma(classify_level=basic, topic=highlightjs)
+_pragma(classify_level=basic, topic={highlightjs, magik})
+_pragma(classify_level=basic, topic={highlightjs}, usage=subclassable)
+_pragma(classify_level=basic, topic=highlightjs, usage={redefinable, subclassable})
