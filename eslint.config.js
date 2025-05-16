@@ -2,7 +2,8 @@ module.exports = {
   files: ['src/languages/*.js'],
     rules: {
       'no-unused-expressions': 'off',
-      camelcase: 'off',
+      'camelcase': 'off',
+      'no-unused-vars': 'error',
       'no-control-regex': 'off',
       'no-useless-escape': 'off',
       'comma-dangle': 'off',
