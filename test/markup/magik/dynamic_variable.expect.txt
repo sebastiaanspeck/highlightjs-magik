@@ -1,0 +1,5 @@
+<span class="hljs-variable">!terminal!</span>
+<span class="hljs-variable">sw:!terminal!</span>
+<span class="hljs-variable">|!terminal!|</span>
+<span class="hljs-variable">|!terminal|!</span>
+<span class="hljs-variable">!|terminal|!</span>

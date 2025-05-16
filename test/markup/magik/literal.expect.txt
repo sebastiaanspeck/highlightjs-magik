@@ -2,3 +2,4 @@
 <span class="hljs-literal">_True</span>
 <span class="hljs-literal">_false</span>
 <span class="hljs-literal">_maybe</span>
+<span class="hljs-literal">_unset</span>

@@ -1,0 +1,4 @@
+a <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-number">1</span>
+b <span class="hljs-operator">^&lt;&lt;</span> <span class="hljs-number">1</span>
+c <span class="hljs-operator">+&lt;&lt;</span> <span class="hljs-number">1</span>
+d <span class="hljs-operator">_orif&lt;&lt;</span> a

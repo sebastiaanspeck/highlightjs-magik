@@ -1,0 +1,56 @@
+_block
+  _dynamic !terminal!
+  _dynamic !output!, !terminal!
+_endblock
+
+_block
+  _dynamic _import !terminal!
+_endblock
+
+_block
+  _global gis_program_manager
+  _global sw:gis_program_manager
+  _global !current_view!
+  _global gis_program_manager, sw:sw_module_manager, !current_view!
+_endblock
+
+_global gis_program_manager << _unset
+_global !current_view! << _unset
+
+_global _constant gis_program_manager << _unset
+_global _constant !current_view! << _unset
+
+_block
+  _import x
+_endblock
+
+_block
+  _local a_name
+  _local a_init << 1
+  _local (a_init, _gather a_gather) << (_scatter b_values)
+  _local (_gather a_init) << b_values
+  _local a_init << _false, b_init
+  _local a_init << _false, b_init << _true
+  _local a_init << _false, b_init, c_init << _true
+_endblock
+
+_block
+  _constant max_size << 1
+_endblock
+
+_block
+  _constant _local max_size << 1
+_endblock
+
+_block
+  _local _constant max_size << 1
+_endblock
+
+def_slotted_exemplar(:exemplar, {}, {}, {_class |com.gesmallworld.magik.language.MagikFinalisable|})
+$
+
+def_slotted_exemplar(:another_exemplar, {}, _unset, {_class |com.gesmallworld.magik.html5.MagikHTML5Component|})
+$
+
+def_slotted_exemplar(:exemplar, {}, {}, {_class |com.gesmallworld.magik.language.Straße|})
+$

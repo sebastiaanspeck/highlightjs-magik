@@ -1,8 +1,8 @@
 /*
- Language: magik
- Description: Magik is an object-oriented programming language that supports multiple inheritance and polymorphism, and it is dynamically typed.
- Author: Sebastiaan Speck <sebastiaanspeck@github.com>
- Category: enterprise
+Language: Magik
+Description: Magik is an object-oriented programming language that supports multiple inheritance and polymorphism, and it is dynamically typed.
+Author: Sebastiaan Speck <sebastiaanspeck@github.com>
+Category: enterprise // FIXME: Is this the correct category?
 */
 
 module.exports = function(hljs) {
@@ -13,49 +13,42 @@ module.exports = function(hljs) {
     '_unset'
   ];
 
-  const LANGUAGE_KEYWORDS = [
-    '_self',
-    '_super',
-    '_clone',
-  ];
-
-  const OPERATORS = [
-    '_and',
-    '_or',
-    '_xor',
-    '_andif',
-    '_orif',
-  ];
-
-  const VARIABLE_KEYWORDS = [
+  const VARIABLES = [
+    '_dynamic',
     '_global',
+    '_import',
     '_local',
     '_constant',
-    '_dynamic',
-    '_import',
-    '_optional',
+    '_class',
+  ]
+
+  const ARGUMENTS = [
     '_gather',
-    '_scatter'
+    '_scatter',
+    '_allresults',
+    '_optional'
   ];
 
-  const METHOD_KEYWORDS = [
+  const METHOD = [
     '_abstract',
     '_private',
     '_iter',
     '_method',
-    '_endmethod'
+    '_endmethod',
+    '_primitive',
   ];
 
-  const LOOP_KEYWORDS = [
-    '_loop',
-    '_for',
-    '_over',
-    '_while',
-    '_finally',
-    '_endloop'
-  ];
+  const PROCEDURE = [
+    '_proc',
+    '_endproc'
+  ]
 
-  const IF_KEYWORDS = [
+  const BLOCK = [
+    '_block',
+    '_endblock'
+  ]
+
+  const IF = [
     '_if',
     '_then',
     '_elif',
@@ -63,32 +56,170 @@ module.exports = function(hljs) {
     '_endif'
   ]
 
-  const RETURN_OPERATOR = {
-    scope: 'keyword',
-    begin: />>/
-  };
+  const LOOP = [
+    '_loop',
+    '_for',
+    '_over',
+    '_while',
+    '_finally',
+    '_loopbody',
+    '_leave',
+    '_continue',
+    '_endloop'
+  ];
+
+  const HANDLING = [
+    '_handling',
+    '_default'
+  ]
+
+  const CATCH = [
+    '_catch',
+    '_endcatch'
+  ]
+
+  const TRY = [
+    '_try',
+    '_when',
+    '_endtry'
+  ]
+
+  const PROTECT = [
+    '_protect',
+    '_locking',
+    '_protection',
+    '_endprotect',
+  ]
+
+  const LOCK = [
+    '_lock',
+    '_endlock'
+  ]
+
+  const RELATIONAL_OPERATOR = [
+    '_is',
+    '_isnt',
+    '_cf',
+    '=',
+    '~=',
+    '<>',
+    '>=',
+    '<=',
+    '<',
+    '>'
+  ]
+
+  const LOGICAL_OPERATOR = [
+    '_and',
+    '_or',
+    '_xor',
+    '_andif',
+    '_orif',
+  ];
+
+  const ARITHMETIC_OPERATOR = [
+    '**',
+    '*',
+    '/',
+    '_mod',
+    '_div',
+  ]
+
+  const UNARY_OPERATOR = [
+    '_not',
+    '_~'
+  ]
 
   const KEYWORDS = {
     keyword: [
- ...OPERATORS,
-'_return'
-],
-    type: [
- '_package',
-'_proc',
-'_endproc',
-...VARIABLE_KEYWORDS,
-...METHOD_KEYWORDS,
-...LOOP_KEYWORDS,
-...IF_KEYWORDS
-],
+      ...VARIABLES,
+      ...ARGUMENTS,
+      ...METHOD,
+      ...PROCEDURE,
+      ...BLOCK,
+      ...IF,
+      ...LOOP,
+      ...HANDLING,
+      ...CATCH,
+      ...TRY,
+      ...PROTECT,
+      ...LOCK,
+      '_return',
+      '_throw',
+      '_with',
+    ],
     literal: LITERALS,
-    built_in: LANGUAGE_KEYWORDS,
+    operator: [
+      ...RELATIONAL_OPERATOR,
+      ...LOGICAL_OPERATOR,
+      ...ARITHMETIC_OPERATOR,
+      ...UNARY_OPERATOR
+    ],
+    punctuation: [
+      '(', ')', '[', ']', ',', ';'
+    ],
+    built_in: [ '_package' ],
+    'variable.language': [
+      '_self',
+      '_super',
+      '_clone'
+    ],
+    'title.function.invoke': [ 'def_slotted_exemplar' ],
+    meta: ARGUMENTS,
   };
 
-  const SYMBOL = {
-    scope: 'symbol',
-    begin: /:(\|[^|]*\||[\w?!_])+/
+  const CLASS = {
+    match: [
+      /\b_class/,
+      /\s+/,
+      /\|[a-zA-Z0-9._]+\|/
+    ],
+    scope: {
+      1: 'keyword',
+      3: 'title.class'
+    }
+  };
+
+  const LABEL = {
+    scope: 'meta',
+    begin: /@\s?(\|[A-Za-z0-9_?.!]*\||[A-Za-z0-9_?!]+)+/
+  };
+
+  const NUMBER = {
+    scope: 'number',
+    variants: [
+      { begin: '\\b\\d+(\\.\\d+)?([eE&][+-]?\\d+)?\\b'}, // Decimal and floats with optional exponent
+      { begin: '\\b(?:[2-9]|[1-2]\\d|3[0-6])[rR][a-zA-Z0-9]+\\b' } // Radix notation (e.g., 16r1F)
+    ],
+    relevance: 0
+  };
+
+  const METHOD_DECLARATION = {
+    match: [
+      /(?:_abstract\s+)?/,
+      /(?:_private\s+)?/,
+      /(?:_iter\s+)?/,
+      /_method/,
+      /\s+/,
+      /[a-zA-Z_][a-zA-Z0-9_]*/,
+      /(?:\.[a-zA-Z_][a-zA-Z0-9_]*)?/
+    ],
+    scope: {
+      4: 'keyword',
+      6: 'title.class',
+      7: 'title.function'
+    }
+  };
+
+  const DYNAMIC_VARIABLE = {
+    scope: 'variable',
+    variants: [
+      { begin: /![A-Za-z][A-Za-z0-9_?!]*!/ },
+      { begin: /\|![A-Za-z0-9_?!]+!\|/ },
+      { begin: /\|![A-Za-z0-9_?!]+\|!/ },
+      { begin: /!\|[A-Za-z0-9_?!]+\|!/ },
+      { begin: /(\|[A-Za-z]?[A-Za-z0-9_?!]*\||[A-Za-z][A-Za-z0-9_?!]*):![A-Za-z][A-Za-z0-9_?!]*!/ },
+    ]
   };
 
   const GLOBAL_VARIABLE = {
@@ -101,10 +232,25 @@ module.exports = function(hljs) {
     begin: /@(?:[a-zA-Z_][a-zA-Z0-9_]*:)?[a-zA-Z_][a-zA-Z0-9_]*/
   };
 
-  const COMMENT = {
-    scope: 'comment',
-    begin: '#',
+  const PRAGMA = {
+    scope: 'property',
+    begin: '_pragma',
     end: '$'
+  };
+
+  const ASSIGNMENT = {
+    scope: 'operator',
+    begin: /<<|\^<<|_and<<|_andif<<|_or<<|_orif<<|_xor<<|\*\*<<|\*\*\^<<|\*<<|\*?\^<<|\/<<|\/\^<<|_mod<<|_div<<|-\^?<<|\+<<|\+\^<</
+  };
+
+  const RETURN = {
+    scope: 'operator',
+    begin: />>/
+  };
+
+  const SYMBOL = {
+    scope: 'symbol',
+    begin: /:(\|[^|]*\||[\w?!_])+/
   };
 
   const DOCUMENTATION = {
@@ -113,11 +259,12 @@ module.exports = function(hljs) {
     end: '$'
   };
 
-  const PRAGMA = {
-    scope: 'property',
-    begin: '_pragma',
+  const COMMENT = {
+    scope: 'comment',
+    begin: '#',
     end: '$'
   };
+
   return {
     name: 'Magik',
     aliases: [ 'magik' ],
@@ -126,14 +273,19 @@ module.exports = function(hljs) {
     contains: [
       hljs.QUOTE_STRING_MODE, // For double-quoted strings
       hljs.APOS_STRING_MODE, // For single-quoted strings
-      hljs.C_NUMBER_MODE,
       DOCUMENTATION,
       COMMENT,
-      RETURN_OPERATOR,
       SYMBOL,
       PRAGMA,
+      ASSIGNMENT,
+      RETURN,
+      NUMBER,
+      LABEL,
+      CLASS,
+      DYNAMIC_VARIABLE,
       GLOBAL_VARIABLE,
-      GLOBAL_REFERENCE
+      GLOBAL_REFERENCE,
+      METHOD_DECLARATION
     ]
   };
 };

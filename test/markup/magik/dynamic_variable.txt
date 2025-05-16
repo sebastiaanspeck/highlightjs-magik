@@ -1,0 +1,5 @@
+!terminal!
+sw:!terminal!
+|!terminal!|
+|!terminal|!
+!|terminal|!
