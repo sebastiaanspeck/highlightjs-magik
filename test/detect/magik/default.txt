@@ -1,0 +1,14 @@
+_package user
+
+_method highlighter.highlight(parameter)
+    _local var << 1234 + write_string("")
+    _constant << "a quoted string"
+
+    _if parameter _isnt _unset
+    _then
+        _return parameter
+    _else
+        _return 0
+    _endif
+_endmethod
+$

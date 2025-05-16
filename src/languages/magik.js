@@ -1,8 +1,8 @@
 /*
  Language: magik
- Category: scripting
- Author: author <author@website.com>
- Description: This is a placeholder language to be replaced by magik. Tell us what magik is all about.
+ Description: Magik is an object-oriented programming language that supports multiple inheritance and polymorphism, and it is dynamically typed.
+ Author: Sebastiaan Speck <sebastiaanspeck@github.com>
+ Category: enterprise
 */
 
 module.exports = function(hljs) {
@@ -48,12 +48,20 @@ module.exports = function(hljs) {
 
   const LOOP_KEYWORDS = [
     '_loop',
-    '_for', 
+    '_for',
     '_over',
     '_while',
     '_finally',
     '_endloop'
   ];
+
+  const IF_KEYWORDS = [
+    '_if',
+    '_then',
+    '_elif',
+    '_else',
+    '_endif'
+  ]
 
   const RETURN_OPERATOR = {
     scope: 'keyword',
@@ -63,7 +71,7 @@ module.exports = function(hljs) {
   const KEYWORDS = {
     keyword: [
  ...OPERATORS,
-'_return' 
+'_return'
 ],
     type: [
  '_package',
@@ -71,7 +79,8 @@ module.exports = function(hljs) {
 '_endproc',
 ...VARIABLE_KEYWORDS,
 ...METHOD_KEYWORDS,
-...LOOP_KEYWORDS 
+...LOOP_KEYWORDS,
+...IF_KEYWORDS
 ],
     literal: LITERALS,
     built_in: LANGUAGE_KEYWORDS,
@@ -79,16 +88,16 @@ module.exports = function(hljs) {
 
   const SYMBOL = {
     scope: 'symbol',
-    begin: /:(\|[^|]*\||[\w?!]+)+/
+    begin: /:(\|[^|]*\||[\w?!_])+/
   };
 
   const GLOBAL_VARIABLE = {
-    scope: 'variable',  // or 'variable.language' if you prefer
+    scope: 'variable',
     begin: /[a-zA-Z_][a-zA-Z0-9_]*:[a-zA-Z_][a-zA-Z0-9_]*/
   };
 
   const GLOBAL_REFERENCE = {
-    scope: 'variable', // or 'variable.language' or another scope as appropriate
+    scope: 'variable',
     begin: /@(?:[a-zA-Z_][a-zA-Z0-9_]*:)?[a-zA-Z_][a-zA-Z0-9_]*/
   };
 

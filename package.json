@@ -5,7 +5,10 @@
   "description": "A new language template set up when creating a language definition for highlightjs",
   "main": "src/languages/magik.js",
   "scripts": {
-    "test": "jasmine",
+    "mocha": "mocha",
+    "test": "mocha test",
+    "test-markup": "mocha test/markup",
+    "test-detect": "mocha test/detect",
     "lint": "eslint src/languages/magik.js"
   },
   "files": [
@@ -29,8 +32,9 @@
   },
   "homepage": "https://github.com/sebastiaanspeck/highlightjs-magik",
   "devDependencies": {
+    "eslint": "^9.26.0",
     "highlight.js": "^11.11.1",
-    "jasmine": "^5.7.1",
-    "eslint": "^9.26.0"
+    "mocha": "^11.2.2",
+    "should": "^13.2.3"
   }
 }
