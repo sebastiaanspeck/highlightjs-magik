@@ -6,13 +6,6 @@ Category: enterprise // FIXME: Is this the correct category?
 */
 
 module.exports = function(hljs) {
-  const LITERALS = [
-    '_true',
-    '_false',
-    '_maybe',
-    '_unset'
-  ];
-
   const VARIABLES = [
     '_dynamic',
     '_global',
@@ -22,20 +15,12 @@ module.exports = function(hljs) {
     '_class',
   ]
 
-  const ARGUMENTS = [
-    '_gather',
-    '_scatter',
-    '_allresults',
-    '_optional'
-  ];
-
   const METHOD = [
     '_abstract',
     '_private',
     '_iter',
     '_method',
-    '_endmethod',
-    '_primitive',
+    '_endmethod'
   ];
 
   const PROCEDURE = [
@@ -78,6 +63,10 @@ module.exports = function(hljs) {
     '_endcatch'
   ]
 
+  const THROW = [ '_throw' ]
+
+  const PRIMITIVE = [ '_primitive' ]
+
   const TRY = [
     '_try',
     '_when',
@@ -95,6 +84,14 @@ module.exports = function(hljs) {
     '_lock',
     '_endlock'
   ]
+
+  const KLEENEAN = [
+    '_true',
+    '_false',
+    '_maybe',
+  ];
+
+  const UNSET = [ '_unset' ]
 
   const RELATIONAL_OPERATOR = [
     '_is',
@@ -130,10 +127,37 @@ module.exports = function(hljs) {
     '_~'
   ]
 
+  const PUNCTUATION = [
+    '(',
+    ')',
+    '[',
+    ']',
+    ',',
+    ';'
+  ]
+
+  const BUILT_INS = [
+    '_package',
+    '_thisthread'
+  ]
+
+  const SPECIAL_KEYWORDS = [
+    '_self',
+    '_super',
+    '_clone'
+  ]
+
+  const ARGUMENTS = [
+    '_gather',
+    '_scatter',
+    '_allresults',
+    '_optional'
+  ];
+
+
   const KEYWORDS = {
     keyword: [
       ...VARIABLES,
-      ...ARGUMENTS,
       ...METHOD,
       ...PROCEDURE,
       ...BLOCK,
@@ -141,43 +165,64 @@ module.exports = function(hljs) {
       ...LOOP,
       ...HANDLING,
       ...CATCH,
+      ...THROW,
+      ...PRIMITIVE,
       ...TRY,
       ...PROTECT,
       ...LOCK,
-      '_return',
-      '_throw',
-      '_with',
+      '_with', // standalone since _finally, _handling, _throw, _try, _leave and _continue all can have this
     ],
-    literal: LITERALS,
+    literal: [
+      ...KLEENEAN,
+      ...UNSET
+    ],
     operator: [
       ...RELATIONAL_OPERATOR,
       ...LOGICAL_OPERATOR,
       ...ARITHMETIC_OPERATOR,
       ...UNARY_OPERATOR
     ],
-    punctuation: [
-      '(', ')', '[', ']', ',', ';'
-    ],
-    built_in: [ '_package' ],
-    'variable.language': [
-      '_self',
-      '_super',
-      '_clone'
-    ],
+    punctuation: PUNCTUATION,
+    built_in: BUILT_INS,
+    'variable.language': SPECIAL_KEYWORDS,
     'title.function.invoke': [ 'def_slotted_exemplar' ],
     meta: ARGUMENTS,
   };
 
-  const CLASS = {
-    match: [
-      /\b_class/,
-      /\s+/,
-      /\|[a-zA-Z0-9._]+\|/
-    ],
-    scope: {
-      1: 'keyword',
-      3: 'title.class'
-    }
+  const DOCUMENTATION = {
+    scope: 'doctag',
+    begin: '##',
+    end: '$'
+  };
+
+  const COMMENT = {
+    scope: 'comment',
+    begin: '#',
+    end: '$'
+  };
+
+  const SYMBOL = {
+    scope: 'symbol',
+    begin: /:(\|[^|]*\||[\w?!_])+/
+  };
+
+  const PRAGMA = {
+    scope: 'property',
+    begin: '_pragma',
+    end: '$'
+  };
+
+  const ASSIGNMENT = {
+    scope: 'operator',
+    begin: /<<|\^<<|_and<<|_andif<<|_or<<|_orif<<|_xor<<|\*\*<<|\*\*\^<<|\*<<|\*?\^<<|\/<<|\/\^<<|_mod<<|_div<<|-\^?<<|\+<<|\+\^<</
+  };
+
+  const RETURN = {
+    scope: 'operator',
+    variants: [
+      { begin: />>/ },
+      { begin: '_return' }
+    ]
   };
 
   const LABEL = {
@@ -194,20 +239,15 @@ module.exports = function(hljs) {
     relevance: 0
   };
 
-  const METHOD_DECLARATION = {
+  const CLASS = {
     match: [
-      /(?:_abstract\s+)?/,
-      /(?:_private\s+)?/,
-      /(?:_iter\s+)?/,
-      /_method/,
+      /\b_class/,
       /\s+/,
-      /[a-zA-Z_][a-zA-Z0-9_]*/,
-      /(?:\.[a-zA-Z_][a-zA-Z0-9_]*)?/
+      /\|[a-zA-Z0-9._]+\|/
     ],
     scope: {
-      4: 'keyword',
-      6: 'title.class',
-      7: 'title.function'
+      1: 'keyword',
+      3: 'title.class'
     }
   };
 
@@ -232,37 +272,21 @@ module.exports = function(hljs) {
     begin: /@(?:[a-zA-Z_][a-zA-Z0-9_]*:)?[a-zA-Z_][a-zA-Z0-9_]*/
   };
 
-  const PRAGMA = {
-    scope: 'property',
-    begin: '_pragma',
-    end: '$'
-  };
-
-  const ASSIGNMENT = {
-    scope: 'operator',
-    begin: /<<|\^<<|_and<<|_andif<<|_or<<|_orif<<|_xor<<|\*\*<<|\*\*\^<<|\*<<|\*?\^<<|\/<<|\/\^<<|_mod<<|_div<<|-\^?<<|\+<<|\+\^<</
-  };
-
-  const RETURN = {
-    scope: 'operator',
-    begin: />>/
-  };
-
-  const SYMBOL = {
-    scope: 'symbol',
-    begin: /:(\|[^|]*\||[\w?!_])+/
-  };
-
-  const DOCUMENTATION = {
-    scope: 'doctag',
-    begin: '##',
-    end: '$'
-  };
-
-  const COMMENT = {
-    scope: 'comment',
-    begin: '#',
-    end: '$'
+  const METHOD_DECLARATION = {
+    match: [
+      /(?:_abstract\s+)?/,
+      /(?:_private\s+)?/,
+      /(?:_iter\s+)?/,
+      /_method/,
+      /\s+/,
+      /[a-zA-Z_][a-zA-Z0-9_]*/,
+      /(?:\.[a-zA-Z_][a-zA-Z0-9_]*)?/
+    ],
+    scope: {
+      4: 'keyword',
+      6: 'title.class',
+      7: 'title.function'
+    }
   };
 
   return {
@@ -279,8 +303,8 @@ module.exports = function(hljs) {
       PRAGMA,
       ASSIGNMENT,
       RETURN,
-      NUMBER,
       LABEL,
+      NUMBER,
       CLASS,
       DYNAMIC_VARIABLE,
       GLOBAL_VARIABLE,
