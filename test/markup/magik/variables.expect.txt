@@ -1,6 +1,6 @@
 <span class="hljs-keyword">_block</span>
   <span class="hljs-keyword">_dynamic</span> <span class="hljs-variable">!terminal!</span>
-  <span class="hljs-keyword">_dynamic</span> <span class="hljs-variable">!output!</span>, <span class="hljs-variable">!terminal!</span>
+  <span class="hljs-keyword">_dynamic</span> <span class="hljs-variable">!output!</span><span class="hljs-punctuation">,</span> <span class="hljs-variable">!terminal!</span>
 <span class="hljs-keyword">_endblock</span>
 
 <span class="hljs-keyword">_block</span>
@@ -11,7 +11,7 @@
   <span class="hljs-keyword">_global</span> gis_program_manager
   <span class="hljs-keyword">_global</span> <span class="hljs-variable">sw:gis_program_manager</span>
   <span class="hljs-keyword">_global</span> <span class="hljs-variable">!current_view!</span>
-  <span class="hljs-keyword">_global</span> gis_program_manager, <span class="hljs-variable">sw:sw_module_manager</span>, <span class="hljs-variable">!current_view!</span>
+  <span class="hljs-keyword">_global</span> gis_program_manager<span class="hljs-punctuation">,</span> <span class="hljs-variable">sw:sw_module_manager</span><span class="hljs-punctuation">,</span> <span class="hljs-variable">!current_view!</span>
 <span class="hljs-keyword">_endblock</span>
 
 <span class="hljs-keyword">_global</span> gis_program_manager <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-literal">_unset</span>
@@ -27,11 +27,11 @@
 <span class="hljs-keyword">_block</span>
   <span class="hljs-keyword">_local</span> a_name
   <span class="hljs-keyword">_local</span> a_init <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-number">1</span>
-  <span class="hljs-keyword">_local</span> (a_init, <span class="hljs-meta">_gather</span> a_gather) <span class="hljs-operator">&lt;&lt;</span> (<span class="hljs-meta">_scatter</span> b_values)
-  <span class="hljs-keyword">_local</span> (<span class="hljs-meta">_gather</span> a_init) <span class="hljs-operator">&lt;&lt;</span> b_values
-  <span class="hljs-keyword">_local</span> a_init <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-literal">_false</span>, b_init
-  <span class="hljs-keyword">_local</span> a_init <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-literal">_false</span>, b_init <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-literal">_true</span>
-  <span class="hljs-keyword">_local</span> a_init <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-literal">_false</span>, b_init, c_init <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-literal">_true</span>
+  <span class="hljs-keyword">_local</span> <span class="hljs-punctuation">(</span>a_init<span class="hljs-punctuation">,</span> <span class="hljs-meta">_gather</span> a_gather<span class="hljs-punctuation">)</span> <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-punctuation">(</span><span class="hljs-meta">_scatter</span> b_values<span class="hljs-punctuation">)</span>
+  <span class="hljs-keyword">_local</span> <span class="hljs-punctuation">(</span><span class="hljs-meta">_gather</span> a_init<span class="hljs-punctuation">)</span> <span class="hljs-operator">&lt;&lt;</span> b_values
+  <span class="hljs-keyword">_local</span> a_init <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-literal">_false</span><span class="hljs-punctuation">,</span> b_init
+  <span class="hljs-keyword">_local</span> a_init <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-literal">_false</span><span class="hljs-punctuation">,</span> b_init <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-literal">_true</span>
+  <span class="hljs-keyword">_local</span> a_init <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-literal">_false</span><span class="hljs-punctuation">,</span> b_init<span class="hljs-punctuation">,</span> c_init <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-literal">_true</span>
 <span class="hljs-keyword">_endblock</span>
 
 <span class="hljs-keyword">_block</span>
@@ -46,8 +46,6 @@
   <span class="hljs-keyword">_local</span> <span class="hljs-keyword">_constant</span> max_size <span class="hljs-operator">&lt;&lt;</span> <span class="hljs-number">1</span>
 <span class="hljs-keyword">_endblock</span>
 
-<span class="hljs-title function_ invoke__">def_slotted_exemplar</span>(<span class="hljs-symbol">:exemplar</span>, {}, {}, {<span class="hljs-keyword">_class</span> <span class="hljs-title class_">|com.gesmallworld.magik.language.MagikFinalisable|</span>})
-$
+<span class="hljs-title function_ invoke__">def_slotted_exemplar</span><span class="hljs-punctuation">(</span><span class="hljs-symbol">:exemplar</span><span class="hljs-punctuation">,</span> <span class="hljs-punctuation">{</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span> <span class="hljs-punctuation">{</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span> <span class="hljs-punctuation">{</span><span class="hljs-keyword">_class</span> <span class="hljs-title class_">|com.gesmallworld.magik.language.MagikFinalisable|</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">)</span>
 
-<span class="hljs-title function_ invoke__">def_slotted_exemplar</span>(<span class="hljs-symbol">:another_exemplar</span>, {}, <span class="hljs-literal">_unset</span>, {<span class="hljs-keyword">_class</span> <span class="hljs-title class_">|com.gesmallworld.magik.html5.MagikHTML5Component|</span>})
-$
+<span class="hljs-title function_ invoke__">def_slotted_exemplar</span><span class="hljs-punctuation">(</span><span class="hljs-symbol">:another_exemplar</span><span class="hljs-punctuation">,</span> <span class="hljs-punctuation">{</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span> <span class="hljs-literal">_unset</span><span class="hljs-punctuation">,</span> <span class="hljs-punctuation">{</span><span class="hljs-keyword">_class</span> <span class="hljs-title class_">|com.gesmallworld.magik.html5.MagikHTML5Component|</span><span class="hljs-punctuation">}</span><span class="hljs-punctuation">)</span>

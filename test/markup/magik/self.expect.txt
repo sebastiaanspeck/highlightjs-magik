@@ -1,2 +1,2 @@
 <span class="hljs-variable language_">_self</span>
-<span class="hljs-variable language_">_self</span>.new()
+<span class="hljs-variable language_">_self</span>.new<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>

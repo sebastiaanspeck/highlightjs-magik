@@ -1,0 +1,5 @@
+<span class="hljs-keyword">_block</span>
+	<span class="hljs-keyword">_lock</span> <span class="hljs-variable language_">_self</span>
+	      <span class="hljs-operator">_return</span>
+	<span class="hljs-keyword">_endlock</span>
+<span class="hljs-keyword">_endblock</span>

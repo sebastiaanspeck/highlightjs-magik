@@ -1,0 +1,7 @@
+_try
+_when e
+_endtry
+
+_try _with cond
+_when e
+_endtry

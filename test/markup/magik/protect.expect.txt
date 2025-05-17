@@ -1,0 +1,17 @@
+<span class="hljs-keyword">_block</span>
+	stream <span class="hljs-operator">&lt;&lt;</span> external_text_input_stream.new<span class="hljs-punctuation">(</span>a_file_name<span class="hljs-punctuation">)</span>
+	<span class="hljs-keyword">_protect</span>
+		stream.write<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;something&quot;</span><span class="hljs-punctuation">)</span>
+	<span class="hljs-keyword">_protection</span>
+		stream.close<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
+	<span class="hljs-keyword">_endprotect</span>
+<span class="hljs-keyword">_endblock</span>
+
+<span class="hljs-keyword">_block</span>
+	stream <span class="hljs-operator">&lt;&lt;</span> external_text_input_stream.new<span class="hljs-punctuation">(</span>a_file_name<span class="hljs-punctuation">)</span>
+	<span class="hljs-keyword">_protect</span> <span class="hljs-keyword">_locking</span> <span class="hljs-variable language_">_self</span>
+		stream.write<span class="hljs-punctuation">(</span><span class="hljs-string">&quot;something&quot;</span><span class="hljs-punctuation">)</span>
+	<span class="hljs-keyword">_protection</span>
+		stream.close<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
+	<span class="hljs-keyword">_endprotect</span>
+<span class="hljs-keyword">_endblock</span>

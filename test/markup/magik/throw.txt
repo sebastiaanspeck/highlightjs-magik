@@ -1,0 +1,5 @@
+_throw :error
+_throw @error
+_throw "error"
+_throw :error _with a
+_throw :error _with a, b

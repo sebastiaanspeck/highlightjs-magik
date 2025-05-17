@@ -124,16 +124,7 @@ module.exports = function(hljs) {
 
   const UNARY_OPERATOR = [
     '_not',
-    '_~'
-  ]
-
-  const PUNCTUATION = [
-    '(',
-    ')',
-    '[',
-    ']',
-    ',',
-    ';'
+    '~'
   ]
 
   const BUILT_INS = [
@@ -153,7 +144,6 @@ module.exports = function(hljs) {
     '_allresults',
     '_optional'
   ];
-
 
   const KEYWORDS = {
     keyword: [
@@ -182,7 +172,6 @@ module.exports = function(hljs) {
       ...ARITHMETIC_OPERATOR,
       ...UNARY_OPERATOR
     ],
-    punctuation: PUNCTUATION,
     built_in: BUILT_INS,
     'variable.language': SPECIAL_KEYWORDS,
     'title.function.invoke': [ 'def_slotted_exemplar' ],
@@ -289,6 +278,11 @@ module.exports = function(hljs) {
     }
   };
 
+  const PUNCTUATION = {
+    scope: 'punctuation',
+    begin: /[[\](){},;]/,
+  };
+
   return {
     name: 'Magik',
     aliases: [ 'magik' ],
@@ -309,7 +303,8 @@ module.exports = function(hljs) {
       DYNAMIC_VARIABLE,
       GLOBAL_VARIABLE,
       GLOBAL_REFERENCE,
-      METHOD_DECLARATION
+      METHOD_DECLARATION,
+      PUNCTUATION
     ]
   };
 };

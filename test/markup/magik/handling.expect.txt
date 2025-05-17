@@ -1,0 +1,5 @@
+<span class="hljs-keyword">_handling</span> error <span class="hljs-keyword">_with</span> <span class="hljs-keyword">_proc</span><span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span> <span class="hljs-keyword">_endproc</span><span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
+
+<span class="hljs-keyword">_handling</span> error <span class="hljs-keyword">_with</span> <span class="hljs-keyword">_default</span>
+
+<span class="hljs-keyword">_handling</span> <span class="hljs-keyword">_default</span>

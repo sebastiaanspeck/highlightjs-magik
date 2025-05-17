@@ -1,0 +1,17 @@
+_block
+	stream << external_text_input_stream.new(a_file_name)
+	_protect
+		stream.write("something")
+	_protection
+		stream.close()
+	_endprotect
+_endblock
+
+_block
+	stream << external_text_input_stream.new(a_file_name)
+	_protect _locking _self
+		stream.write("something")
+	_protection
+		stream.close()
+	_endprotect
+_endblock

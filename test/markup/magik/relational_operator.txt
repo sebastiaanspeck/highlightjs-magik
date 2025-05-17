@@ -1,0 +1,11 @@
+a _is a
+a _isnt b
+1 _cf 2
+y +<< x
+1 = 1
+1 ~= 2
+a <> b
+a >= b
+x <= 100
+a < b
+a > b

@@ -19,14 +19,11 @@ _endblock
 _block @ label1?
   _return
 _endblock
-$
 
 _block @ |label1?|
   _return
 _endblock
-$
 
 _block @ |la.bel1|
   _return
 _endblock
-$

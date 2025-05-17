@@ -1,75 +1,65 @@
 _method my_object.method
 _endmethod
-$
 
 _method my_object.method()
 _endmethod
-$
 
 _method my_object.method(a)
 _endmethod
-$
 
 _method my_object.method(a, b)
 _endmethod
-$
 
 _method my_object[]
 _endmethod
-$
 
 _method my_object[a]
 _endmethod
-$
 
 _method my_object[a, b]
 _endmethod
-$
 
 _method my_object.method<< a
 _endmethod
-$
 
 _method my_object.method^<< a
 _endmethod
-$
 
 _method my_object[a]<< b
 _endmethod
-$
 
 _method my_object[a]^<< a
 _endmethod
-$
 
 _method my_object.method(a)<< b
 _endmethod
-$
 
 _method my_object.method(a)^<< b
 _endmethod
-$
 
 _method object.method(_gather args)
 _endmethod
-$
 
 _method object.method(first_arg _gather args)
 _endmethod
-$
 
 _method object.method(_optional arg)
 _endmethod
-$
 
 _method object.method(first_arg, _optional second_arg, third_arg)
 _endmethod
-$
 
 _method object.method<< first_arg, second_arg
 _endmethod
-$
 
 _method object.method^<< first_arg, second_arg
 _endmethod
-$
+
+_method object.getName
+_endmethod
+
+_method object.|getName|
+_endmethod
+
+_method |Object|.|getName|
+_endmethod

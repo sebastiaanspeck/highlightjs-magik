@@ -1,0 +1,44 @@
+_if _true
+_then
+  >> _false
+_endif
+
+_if _true
+_then
+  >> _false
+_elif _false
+_then
+  >> _true
+_else
+  >> _maybe
+_endif
+
+_if _true
+_then
+  >> _false
+_else
+  >> _maybe
+_endif
+
+_if _true
+_then
+  >> _false
+_elif _false
+_then
+  >> _true
+_endif
+
+_if _true _then >> _false _endif
+_if _true _then >> _false _elif _false _then >> _true _else >> _maybe _endif
+_if _true _then >> _false _else >> _maybe _endif
+_if _true _then >> _false _elif _false _then >> _true _endif
+
+_if _true _then _self.do_something() _endif
+_if _true _then _self.do_something() _elif _false _then _self.do_something_else() _else _self.do_something_different() _endif
+_if _true _then _self.do_something() _else _self.do_something_else() _endif
+_if _true _then _self.do_something() _elif _false _then _self.do_something_else() _endif
+
+ok? << _if _true _then >> _false _endif
+ok? << _if _true _then >> _false _elif _false _then >> _true _else >> _maybe _endif
+ok? << _if _true _then >> _false _else >> _maybe _endif
+ok? << _if _true _then >> _false _elif _false _then >> _true _endif

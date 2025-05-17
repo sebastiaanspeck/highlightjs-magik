@@ -1,0 +1,15 @@
+<span class="hljs-keyword">_proc</span><span class="hljs-punctuation">(</span>first<span class="hljs-punctuation">,</span> second<span class="hljs-punctuation">,</span> <span class="hljs-meta">_optional</span> third<span class="hljs-punctuation">,</span> fourth <span class="hljs-meta">_gather</span> rest<span class="hljs-punctuation">)</span>
+<span class="hljs-keyword">_endproc</span>
+
+<span class="hljs-keyword">_iter</span> <span class="hljs-keyword">_proc</span><span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
+  <span class="hljs-keyword">_loopbody</span><span class="hljs-punctuation">(</span>i<span class="hljs-punctuation">)</span>
+<span class="hljs-keyword">_endproc</span>
+
+<span class="hljs-keyword">_proc</span><span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
+	<span class="hljs-doctag">## multi</span>
+	<span class="hljs-doctag">## line</span>
+	<span class="hljs-doctag">## documentation</span>
+
+	<span class="hljs-comment"># comment</span>
+	<span class="hljs-doctag">## comment</span>
+<span class="hljs-keyword">_endproc</span>

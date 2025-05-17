@@ -1,0 +1,88 @@
+<span class="hljs-keyword">_loop</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_loop</span>
+  <span class="hljs-keyword">_continue</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_loop</span>
+  <span class="hljs-keyword">_continue</span> <span class="hljs-keyword">_with</span> <span class="hljs-literal">_unset</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_loop</span>
+  <span class="hljs-keyword">_continue</span> <span class="hljs-keyword">_with</span> <span class="hljs-punctuation">(</span><span class="hljs-literal">_unset</span><span class="hljs-punctuation">,</span> <span class="hljs-literal">_unset</span><span class="hljs-punctuation">)</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_loop</span>
+  <span class="hljs-keyword">_continue</span> <span class="hljs-keyword">_with</span> <span class="hljs-literal">_unset</span><span class="hljs-punctuation">,</span> <span class="hljs-literal">_unset</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_loop</span>
+  <span class="hljs-keyword">_leave</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_loop</span>
+  <span class="hljs-keyword">_leave</span> <span class="hljs-keyword">_with</span> <span class="hljs-literal">_unset</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_loop</span>
+  <span class="hljs-keyword">_leave</span> <span class="hljs-keyword">_with</span> <span class="hljs-punctuation">(</span><span class="hljs-literal">_unset</span><span class="hljs-punctuation">,</span> <span class="hljs-literal">_unset</span><span class="hljs-punctuation">)</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_loop</span>
+  <span class="hljs-keyword">_leave</span> <span class="hljs-keyword">_with</span> <span class="hljs-literal">_unset</span><span class="hljs-punctuation">,</span> <span class="hljs-literal">_unset</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_loop</span> <span class="hljs-meta">@outer_loop</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_loop</span> <span class="hljs-meta">@outer_loop</span>
+  <span class="hljs-keyword">_continue</span><span class="hljs-meta">@outer_loop</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_loop</span> <span class="hljs-meta">@outer_loop</span>
+  <span class="hljs-keyword">_leave</span><span class="hljs-meta">@outer_loop</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_loop</span><span class="hljs-meta">@|InnerLoop|</span>
+  <span class="hljs-keyword">_leave</span><span class="hljs-meta">@|InnerLoop|</span>
+<span class="hljs-keyword">_endloop</span>
+$
+
+<span class="hljs-keyword">_loop</span><span class="hljs-meta">@Stra</span>ßeLoop
+  <span class="hljs-keyword">_leave</span> <span class="hljs-meta">@Stra</span>ßeLoop
+<span class="hljs-keyword">_endloop</span>
+$
+
+<span class="hljs-keyword">_loop</span><span class="hljs-meta">@||</span>
+  <span class="hljs-keyword">_leave</span> <span class="hljs-meta">@||</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_over</span> simple_vector.fast_elements<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
+<span class="hljs-keyword">_loop</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_for</span> e <span class="hljs-keyword">_over</span> simple_vector.fast_elements<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
+<span class="hljs-keyword">_loop</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_for</span> e <span class="hljs-keyword">_over</span> simple_vector.fast_elements<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
+<span class="hljs-keyword">_loop</span> <span class="hljs-meta">@outer_loop</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_for</span> e <span class="hljs-keyword">_over</span> simple_vector.fast_elements<span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
+<span class="hljs-keyword">_loop</span>
+<span class="hljs-keyword">_finally</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_while</span> x &lt;= <span class="hljs-number">100</span>
+<span class="hljs-keyword">_loop</span>
+  y <span class="hljs-operator">+&lt;&lt;</span> x
+  x <span class="hljs-operator">+&lt;&lt;</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">_endloop</span>
+
+<span class="hljs-keyword">_while</span> x &lt;= <span class="hljs-number">100</span>
+<span class="hljs-keyword">_loop</span><span class="hljs-meta">@outer_loop</span>
+  y <span class="hljs-operator">+&lt;&lt;</span> x
+  x <span class="hljs-operator">+&lt;&lt;</span> <span class="hljs-number">1</span>
+<span class="hljs-keyword">_endloop</span>

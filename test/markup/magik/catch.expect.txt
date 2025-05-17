@@ -1,16 +1,12 @@
 <span class="hljs-keyword">_catch</span> <span class="hljs-symbol">:error</span>
 <span class="hljs-keyword">_endcatch</span>
-$
 
 <span class="hljs-keyword">_catch</span> <span class="hljs-meta">@error</span>
 <span class="hljs-keyword">_endcatch</span>
-$
 
 <span class="hljs-keyword">_catch</span> <span class="hljs-string">&quot;error&quot;</span>
 <span class="hljs-keyword">_endcatch</span>
-$
 
 <span class="hljs-keyword">_catch</span> <span class="hljs-symbol">:error</span>
   <span class="hljs-operator">&gt;&gt;</span> <span class="hljs-literal">_true</span>
 <span class="hljs-keyword">_endcatch</span>
-$

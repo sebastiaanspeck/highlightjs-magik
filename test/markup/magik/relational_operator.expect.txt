@@ -1,0 +1,11 @@
+a <span class="hljs-operator">_is</span> a
+a <span class="hljs-operator">_isnt</span> b
+<span class="hljs-number">1</span> <span class="hljs-operator">_cf</span> <span class="hljs-number">2</span>
+y <span class="hljs-operator">+&lt;&lt;</span> x
+<span class="hljs-number">1</span> = <span class="hljs-number">1</span>
+<span class="hljs-number">1</span> ~= <span class="hljs-number">2</span>
+a &lt;&gt; b
+a &gt;= b
+x &lt;= <span class="hljs-number">100</span>
+a &lt; b
+a &gt; b

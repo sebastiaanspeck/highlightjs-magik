@@ -1,0 +1,15 @@
+_proc(first, second, _optional third, fourth _gather rest)
+_endproc
+
+_iter _proc()
+  _loopbody(i)
+_endproc
+
+_proc()
+	## multi
+	## line
+	## documentation
+
+	# comment
+	## comment
+_endproc

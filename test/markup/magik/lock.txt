@@ -1,0 +1,5 @@
+_block
+	_lock _self
+	      _return
+	_endlock
+_endblock

@@ -1,0 +1,10 @@
+<span class="hljs-number">5</span> ** <span class="hljs-number">2</span>
+a ** <span class="hljs-number">2</span>
+<span class="hljs-number">1</span> * <span class="hljs-number">3</span>
+<span class="hljs-number">1</span> * b
+<span class="hljs-number">25</span> / <span class="hljs-number">5</span>
+a / <span class="hljs-number">5</span>
+<span class="hljs-number">20</span> <span class="hljs-operator">_mod</span> <span class="hljs-number">3</span>
+<span class="hljs-number">20</span> <span class="hljs-operator">_mod</span> b
+<span class="hljs-number">27</span> <span class="hljs-operator">_div</span> <span class="hljs-number">3</span>
+a <span class="hljs-operator">_div</span> b

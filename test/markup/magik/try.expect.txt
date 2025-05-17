@@ -1,0 +1,7 @@
+<span class="hljs-keyword">_try</span>
+<span class="hljs-keyword">_when</span> e
+<span class="hljs-keyword">_endtry</span>
+
+<span class="hljs-keyword">_try</span> <span class="hljs-keyword">_with</span> cond
+<span class="hljs-keyword">_when</span> e
+<span class="hljs-keyword">_endtry</span>

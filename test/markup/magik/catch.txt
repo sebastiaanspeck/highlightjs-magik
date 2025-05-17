@@ -1,16 +1,12 @@
 _catch :error
 _endcatch
-$
 
 _catch @error
 _endcatch
-$
 
 _catch "error"
 _endcatch
-$
 
 _catch :error
   >> _true
 _endcatch
-$

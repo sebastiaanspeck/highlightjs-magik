@@ -1,75 +1,65 @@
 <span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span>
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span>()
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span><span class="hljs-punctuation">(</span><span class="hljs-punctuation">)</span>
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span>(a)
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span><span class="hljs-punctuation">(</span>a<span class="hljs-punctuation">)</span>
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span>(a, b)
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span><span class="hljs-punctuation">(</span>a<span class="hljs-punctuation">,</span> b<span class="hljs-punctuation">)</span>
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span>[]
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-punctuation">[</span><span class="hljs-punctuation">]</span>
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span>[a]
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-punctuation">[</span>a<span class="hljs-punctuation">]</span>
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span>[a, b]
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-punctuation">[</span>a<span class="hljs-punctuation">,</span> b<span class="hljs-punctuation">]</span>
 <span class="hljs-keyword">_endmethod</span>
-$
 
 <span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span><span class="hljs-operator">&lt;&lt;</span> a
 <span class="hljs-keyword">_endmethod</span>
-$
 
 <span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span><span class="hljs-operator">^&lt;&lt;</span> a
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span>[a]<span class="hljs-operator">&lt;&lt;</span> b
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-punctuation">[</span>a<span class="hljs-punctuation">]</span><span class="hljs-operator">&lt;&lt;</span> b
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span>[a]<span class="hljs-operator">^&lt;&lt;</span> a
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-punctuation">[</span>a<span class="hljs-punctuation">]</span><span class="hljs-operator">^&lt;&lt;</span> a
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span>(a)<span class="hljs-operator">&lt;&lt;</span> b
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span><span class="hljs-punctuation">(</span>a<span class="hljs-punctuation">)</span><span class="hljs-operator">&lt;&lt;</span> b
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span>(a)<span class="hljs-operator">^&lt;&lt;</span> b
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">my_object</span><span class="hljs-title function_">.method</span><span class="hljs-punctuation">(</span>a<span class="hljs-punctuation">)</span><span class="hljs-operator">^&lt;&lt;</span> b
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.method</span>(<span class="hljs-meta">_gather</span> args)
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.method</span><span class="hljs-punctuation">(</span><span class="hljs-meta">_gather</span> args<span class="hljs-punctuation">)</span>
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.method</span>(first_arg <span class="hljs-meta">_gather</span> args)
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.method</span><span class="hljs-punctuation">(</span>first_arg <span class="hljs-meta">_gather</span> args<span class="hljs-punctuation">)</span>
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.method</span>(<span class="hljs-meta">_optional</span> arg)
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.method</span><span class="hljs-punctuation">(</span><span class="hljs-meta">_optional</span> arg<span class="hljs-punctuation">)</span>
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.method</span>(first_arg, <span class="hljs-meta">_optional</span> second_arg, third_arg)
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.method</span><span class="hljs-punctuation">(</span>first_arg<span class="hljs-punctuation">,</span> <span class="hljs-meta">_optional</span> second_arg<span class="hljs-punctuation">,</span> third_arg<span class="hljs-punctuation">)</span>
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.method</span><span class="hljs-operator">&lt;&lt;</span> first_arg, second_arg
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.method</span><span class="hljs-operator">&lt;&lt;</span> first_arg<span class="hljs-punctuation">,</span> second_arg
 <span class="hljs-keyword">_endmethod</span>
-$
 
-<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.method</span><span class="hljs-operator">^&lt;&lt;</span> first_arg, second_arg
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.method</span><span class="hljs-operator">^&lt;&lt;</span> first_arg<span class="hljs-punctuation">,</span> second_arg
 <span class="hljs-keyword">_endmethod</span>
-$
+
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span><span class="hljs-title function_">.getName</span>
+<span class="hljs-keyword">_endmethod</span>
+
+<span class="hljs-keyword">_method</span> <span class="hljs-title class_">object</span>.|getName|
+<span class="hljs-keyword">_endmethod</span>
+
+<span class="hljs-keyword">_method</span> |Object|.|getName|
+<span class="hljs-keyword">_endmethod</span>
