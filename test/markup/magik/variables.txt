@@ -51,6 +51,3 @@ $
 
 def_slotted_exemplar(:another_exemplar, {}, _unset, {_class |com.gesmallworld.magik.html5.MagikHTML5Component|})
 $
-
-def_slotted_exemplar(:exemplar, {}, {}, {_class |com.gesmallworld.magik.language.Straße|})
-$

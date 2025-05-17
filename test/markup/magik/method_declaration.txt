@@ -50,10 +50,6 @@ _method my_object.method(a)^<< b
 _endmethod
 $
 
-_abstract _private _iter _method object.abstract_private_iter()
-_endmethod
-$
-
 _method object.method(_gather args)
 _endmethod
 $

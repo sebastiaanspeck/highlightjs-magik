@@ -1,0 +1,10 @@
+# Single line 'comment'
+
+# Multi
+# Line
+# Comment
+
+_block
+ 1 _and # comment
+ 2
+_endblock

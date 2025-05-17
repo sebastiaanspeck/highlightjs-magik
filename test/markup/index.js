@@ -1,7 +1,5 @@
 'use strict';
 
-//require('chai').should();
-
 const fs = require('fs').promises;
 const glob = require('glob');
 const hljs = require("highlight.js/lib/core");
@@ -16,7 +14,7 @@ hljs.registerLanguage(languageName, magik);
 
 describe("highlight " + languageName, () => {
   const filePath = utility.buildPath('markup', languageName, '*.expect.txt');
-  const filenames = glob.sync(filePath, {windowsPathsNoEscape: true});
+  const filenames = glob.sync(filePath, { windowsPathsNoEscape: true }).sort();
 
   filenames.forEach(function(filename) {
     const testName = path.basename(filename, '.expect.txt');

@@ -1,0 +1,4 @@
+_abstract _private _iter _method object.abstract_private_iter()
+    _primitive 512
+_endmethod
+$

@@ -1,0 +1,2 @@
+<span class="hljs-built_in">_thisthread</span>.sleep(<span class="hljs-number">10</span>)
+<span class="hljs-built_in">_thisthread</span>.background_priority

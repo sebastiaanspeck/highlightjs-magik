@@ -1,0 +1,2 @@
+<span class="hljs-variable language_">_clone</span>
+<span class="hljs-variable language_">_clone</span>.init()

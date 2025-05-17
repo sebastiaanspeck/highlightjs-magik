@@ -1,0 +1,2 @@
+_thisthread.sleep(10)
+_thisthread.background_priority

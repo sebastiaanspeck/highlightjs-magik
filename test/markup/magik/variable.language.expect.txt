@@ -1,3 +1,0 @@
-<span class="hljs-variable language_">_self</span>
-<span class="hljs-variable language_">_super</span>
-<span class="hljs-variable language_">_clone</span>

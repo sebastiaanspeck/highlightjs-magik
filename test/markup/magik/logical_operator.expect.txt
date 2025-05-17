@@ -1,0 +1,6 @@
+<span class="hljs-literal">_true</span> <span class="hljs-operator">_and</span> <span class="hljs-literal">_true</span>
+<span class="hljs-literal">_false</span> <span class="hljs-operator">_or</span> <span class="hljs-literal">_true</span>
+<span class="hljs-literal">_true</span> <span class="hljs-operator">_xor</span> <span class="hljs-literal">_false</span>
+<span class="hljs-literal">_true</span> <span class="hljs-operator">_andif</span> <span class="hljs-literal">_true</span>
+<span class="hljs-literal">_false</span> <span class="hljs-operator">_orif</span> <span class="hljs-literal">_true</span>
+<span class="hljs-literal">_false</span> _xorif <span class="hljs-literal">_true</span>

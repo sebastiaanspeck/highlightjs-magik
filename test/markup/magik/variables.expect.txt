@@ -51,6 +51,3 @@ $
 
 <span class="hljs-title function_ invoke__">def_slotted_exemplar</span>(<span class="hljs-symbol">:another_exemplar</span>, {}, <span class="hljs-literal">_unset</span>, {<span class="hljs-keyword">_class</span> <span class="hljs-title class_">|com.gesmallworld.magik.html5.MagikHTML5Component|</span>})
 $
-
-<span class="hljs-title function_ invoke__">def_slotted_exemplar</span>(<span class="hljs-symbol">:exemplar</span>, {}, {}, {<span class="hljs-keyword">_class</span> |com.gesmallworld.magik.language.Straße|})
-$

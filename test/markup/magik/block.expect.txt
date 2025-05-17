@@ -1,10 +1,10 @@
 <span class="hljs-keyword">_block</span>
-  <span class="hljs-keyword">_return</span> <span class="hljs-literal">_unset</span>, <span class="hljs-literal">_unset</span>
+  <span class="hljs-operator">_return</span> <span class="hljs-literal">_unset</span>, <span class="hljs-literal">_unset</span>
 <span class="hljs-keyword">_endblock</span>
 
 <span class="hljs-keyword">_block</span>
   <span class="hljs-keyword">_if</span> <span class="hljs-literal">_true</span>
-  <span class="hljs-keyword">_then</span> <span class="hljs-keyword">_return</span> <span class="hljs-literal">_unset</span>, <span class="hljs-literal">_unset</span>
+  <span class="hljs-keyword">_then</span> <span class="hljs-operator">_return</span> <span class="hljs-literal">_unset</span>, <span class="hljs-literal">_unset</span>
   <span class="hljs-keyword">_endif</span>
 <span class="hljs-keyword">_endblock</span>
 
@@ -17,16 +17,16 @@
 <span class="hljs-keyword">_endblock</span>
 
 <span class="hljs-keyword">_block</span> <span class="hljs-meta">@ label1?</span>
-  <span class="hljs-keyword">_return</span>
+  <span class="hljs-operator">_return</span>
 <span class="hljs-keyword">_endblock</span>
 $
 
 <span class="hljs-keyword">_block</span> <span class="hljs-meta">@ |label1?|</span>
-  <span class="hljs-keyword">_return</span>
+  <span class="hljs-operator">_return</span>
 <span class="hljs-keyword">_endblock</span>
 $
 
 <span class="hljs-keyword">_block</span> <span class="hljs-meta">@ |la.bel1|</span>
-  <span class="hljs-keyword">_return</span>
+  <span class="hljs-operator">_return</span>
 <span class="hljs-keyword">_endblock</span>
 $

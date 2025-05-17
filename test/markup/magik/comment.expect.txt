@@ -1,0 +1,10 @@
+<span class="hljs-comment"># Single line &#x27;comment&#x27;</span>
+
+<span class="hljs-comment"># Multi</span>
+<span class="hljs-comment"># Line</span>
+<span class="hljs-comment"># Comment</span>
+
+<span class="hljs-keyword">_block</span>
+ <span class="hljs-number">1</span> <span class="hljs-operator">_and</span> <span class="hljs-comment"># comment</span>
+ <span class="hljs-number">2</span>
+<span class="hljs-keyword">_endblock</span>
