@@ -1,0 +1,7 @@
+<span class="hljs-regexp">/Hello\,\s\w+!/</span>
+<span class="hljs-regexp">/Hello\,\s\w+!/i</span>
+<span class="hljs-regexp">/[a-t]-[1-4]/</span>
+<span class="hljs-regexp">/a\/b/i</span>
+<span class="hljs-regexp">/abc\d{2,4}/i</span>
+<span class="hljs-regexp">/Foo(bAr)?/i</span>
+<span class="hljs-regexp">/[aB]*c,/im</span>

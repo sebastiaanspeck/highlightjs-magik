@@ -278,6 +278,17 @@ module.exports = function(hljs) {
     }
   };
 
+  const CHARACTER = {
+    scope: 'symbol',
+    begin: /%(\|[a-zA-Z_?!][a-zA-Z0-9_?!]*\||[a-zA-Z][a-zA-Z0-9_?!]*|.| )/
+  };
+
+  const REGEX = {
+    scope: 'regexp',
+    begin: /\/(?!\/)(?:\\.|[^\\\/\n])+\/[qisdlmuCX]*/,
+    relevance: 0
+  };
+
   const PUNCTUATION = {
     scope: 'punctuation',
     begin: /[[\](){},;]/,
@@ -304,6 +315,8 @@ module.exports = function(hljs) {
       GLOBAL_VARIABLE,
       GLOBAL_REFERENCE,
       METHOD_DECLARATION,
+      CHARACTER,
+      REGEX,
       PUNCTUATION
     ]
   };
