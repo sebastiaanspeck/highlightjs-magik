@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/sebastiaanspeck/highlightjs-magik",
   "devDependencies": {
-    "eslint": "^9.26.0",
+    "eslint": "^9.27.0",
     "highlight.js": "^11.11.1",
     "mocha": "^11.2.2",
     "should": "^13.2.3"
