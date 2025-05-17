@@ -25,7 +25,7 @@ Simply load the module after loading Highlight.js.  You'll use the minified vers
 
 ```html
 <script type="text/javascript"
-  src="https://unpkg.com/highlightjs-magik@0.0.1/dist/magik.min.js"></script>
+  src="https://unpkg.com/highlightjs-magik@0.0.0/dist/magik.min.js"></script>
 ```
 
 - More info: <https://unpkg.com>
@@ -44,8 +44,7 @@ hljs.highlightAll();
 
 ## License
 
-Highlight.js for Magik is released under the MIT License. See [LICENSE][1] file
-for details.
+Highlight.js for Magik is released under the MIT License. See [LICENSE][1] file for details.
 
 ### Author
 

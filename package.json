@@ -1,8 +1,8 @@
 {
   "name": "highlightjs-magik",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "author": "Sebastiaan Speck",
-  "description": "A new language template set up when creating a language definition for highlightjs",
+  "description": "Support for using highlight.js to syntax highlight Magik",
   "main": "src/languages/magik.js",
   "scripts": {
     "mocha": "mocha",
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/sebastiaanspeck/highlightjs-magik.git"
+    "url": "git://github.com/sebastiaanspeck/highlightjs-magik.git"
   },
   "keywords": [
     "magik",
