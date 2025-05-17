@@ -43,7 +43,7 @@ jobs:
         working-directory: highlightjs
         run: node ./tools/build.js -t cdn
       - name: Check unchanged dist-folder
-        working-directory: highlightjs
+        working-directory: highlightjs/extra/highlightjs-magik
         shell: bash
         run: |
             git status
