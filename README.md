@@ -1,7 +1,9 @@
-# magik - a language grammar for highlight.js
+# Magik - a language grammar for highlight.js
 
 ![version](https://badgen.net/npm/v/highlightjs-magik) ![license](https://badgen.net/badge/license/MIT/blue)
 ![install size](https://badgen.net/packagephobia/install/highlightjs-magik) ![minified size](https://badgen.net/bundlephobia/min/highlightjs-magik)
+
+[![ci status](https://github.com/sebastiaanspeck/highlightjs-magik/actions/workflows/ci.yml/badge.svg)](https://github.com/sebastiaanspeck/highlightjs-magik/actions/workflows/ci.yml)
 
 ## Usage
 
@@ -23,7 +25,7 @@ Simply load the module after loading Highlight.js.  You'll use the minified vers
 
 ```html
 <script type="text/javascript"
-  src="https://unpkg.com/highlightjs-magik@0.9.1/dist/magik.min.js"></script>
+  src="https://unpkg.com/highlightjs-magik@0.0.1/dist/magik.min.js"></script>
 ```
 
 - More info: <https://unpkg.com>
@@ -42,16 +44,16 @@ hljs.highlightAll();
 
 ## License
 
-Highlight.js is released under the MIT License. See [LICENSE][1] file
+Highlight.js for Magik is released under the MIT License. See [LICENSE][1] file
 for details.
 
 ### Author
 
-Sebastiaan Speck <sebastiaanspeck@github.com>
+Sebastiaan Speck
 
 ## Links
 
 - The official site for the Highlight.js library is <https://highlightjs.org/>.
 - The Highlight.js GitHub project: <https://github.com/highlightjs/highlight.js>
 
-[1]: https://github.com/highlightjs/highlightjs-magik/blob/master/LICENSE
+[1]: https://github.com/sebastiaanspeck/highlightjs-magik/blob/main/LICENSE
