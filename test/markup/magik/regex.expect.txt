@@ -5,3 +5,4 @@
 <span class="hljs-regexp">/abc\d{2,4}/i</span>
 <span class="hljs-regexp">/Foo(bAr)?/i</span>
 <span class="hljs-regexp">/[aB]*c,/im</span>
+<span class="hljs-regexp">//</span>

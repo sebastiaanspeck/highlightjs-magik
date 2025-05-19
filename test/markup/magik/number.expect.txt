@@ -2,10 +2,10 @@
 <span class="hljs-number">65535</span>
 <span class="hljs-number">4294967295</span>
 <span class="hljs-number">18446744073709551617</span>
--<span class="hljs-number">65535</span>
+<span class="hljs-operator">-</span><span class="hljs-number">65535</span>
 <span class="hljs-number">0.0</span>
 <span class="hljs-number">655.35</span>
--<span class="hljs-number">655.35</span>
+<span class="hljs-operator">-</span><span class="hljs-number">655.35</span>
 <span class="hljs-number">2e2</span>
 <span class="hljs-number">2e+2</span>
 <span class="hljs-number">2E+2</span>
@@ -26,4 +26,4 @@
 <span class="hljs-number">16raBcDeF0123456789</span>
 <span class="hljs-number">16RaBcDeF0123456789</span>
 <span class="hljs-number">36rz</span>
--<span class="hljs-number">36rZ</span>
+<span class="hljs-operator">-</span><span class="hljs-number">36rZ</span>

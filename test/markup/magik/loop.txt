@@ -47,12 +47,6 @@ _endloop
 _loop@|InnerLoop|
   _leave@|InnerLoop|
 _endloop
-$
-
-_loop@StraßeLoop
-  _leave @StraßeLoop
-_endloop
-$
 
 _loop@||
   _leave @||

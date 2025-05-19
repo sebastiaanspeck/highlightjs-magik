@@ -93,32 +93,6 @@ module.exports = function(hljs) {
 
   const UNSET = [ '_unset' ]
 
-  const RELATIONAL_OPERATOR = [
-    '_is',
-    '_isnt',
-    '_cf',
-    '=',
-    '~=',
-    '<>',
-    '>=',
-    '<=',
-    '<',
-    '>'
-  ]
-
-  const LOGICAL_OPERATOR = [
-    '_and',
-    '_or',
-    '_xor',
-    '_andif',
-    '_orif',
-  ];
-
-  const UNARY_OPERATOR = [
-    '_not',
-    '~'
-  ]
-
   const BUILT_INS = [
     '_package',
     '_thisthread'
@@ -157,11 +131,6 @@ module.exports = function(hljs) {
     literal: [
       ...KLEENEAN,
       ...UNSET
-    ],
-    operator: [
-      ...RELATIONAL_OPERATOR,
-      ...LOGICAL_OPERATOR,
-      ...UNARY_OPERATOR
     ],
     built_in: BUILT_INS,
     'variable.language': SPECIAL_KEYWORDS,
@@ -258,6 +227,7 @@ module.exports = function(hljs) {
       { begin: /\|![A-Za-z0-9_?!]+\|!/ },
       { begin: /!\|[A-Za-z0-9_?!]+\|!/ },
       { begin: /(\|[A-Za-z]?[A-Za-z0-9_?!]*\||[A-Za-z][A-Za-z0-9_?!]*):![A-Za-z][A-Za-z0-9_?!]*!/ },
+      { begin: /!\|\|!/ }
     ]
   };
 
@@ -297,8 +267,38 @@ module.exports = function(hljs) {
 
   const REGEX = {
     scope: 'regexp',
-    begin: /\/(?!\/)(?:\\.|[^\\\/\n])+\/[qisdlmuCX]*/,
+    variants: [
+      { begin: /\/(?!\/)(?:\\.|[^\\\/\n])+\/[qisdlmuCX]*/ },
+      { begin: /\/\// }
+    ],
     relevance: 0
+  };
+
+  const RELATIONAL_OPERATOR = {
+    scope: 'operator',
+    variants: [
+      { begin: '_is' },
+      { begin: '_isnt' },
+      { begin: '_cf' },
+      { begin: '=' },
+      { begin: '~=' },
+      { begin: '<>' },
+      { begin: '>=' },
+      { begin: '<=' },
+      { begin: '<' },
+      { begin: '>' }
+    ]
+  };
+
+  const LOGICAL_OPERATOR = {
+    scope: 'operator',
+    variants: [
+      { begin: '_and' },
+      { begin: '_or' },
+      { begin: '_xor' },
+      { begin: '_andif' },
+      { begin: '_orif' }
+    ]
   };
 
   const ARITHMETIC_OPERATOR = {
@@ -309,6 +309,16 @@ module.exports = function(hljs) {
       { begin: /\\/ },
       { begin: '_mod' },
       { begin: '_div' }
+    ]
+  };
+
+  const UNARY_OPERATOR = {
+    scope: 'operator',
+    variants: [
+      { begin: /\+/ },
+      { begin: /-/ },
+      { begin: '_not' },
+      { begin: /~/ }
     ]
   };
 
@@ -340,7 +350,10 @@ module.exports = function(hljs) {
       METHOD_DECLARATION,
       CHARACTER,
       REGEX,
+      RELATIONAL_OPERATOR,
+      LOGICAL_OPERATOR,
       ARITHMETIC_OPERATOR,
+      UNARY_OPERATOR,
       PUNCTUATION
     ]
   };

@@ -3,3 +3,4 @@
 <span class="hljs-variable">|!terminal!|</span>
 <span class="hljs-variable">|!terminal|!</span>
 <span class="hljs-variable">!|terminal|!</span>
+<span class="hljs-variable">!||!</span>
