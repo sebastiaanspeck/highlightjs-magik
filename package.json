@@ -1,6 +1,6 @@
 {
   "name": "highlightjs-magik",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "Sebastiaan Speck",
   "description": "Support for using highlight.js to syntax highlight Magik",
   "main": "src/languages/magik.js",
