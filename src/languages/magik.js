@@ -114,14 +114,6 @@ module.exports = function(hljs) {
     '_orif',
   ];
 
-  const ARITHMETIC_OPERATOR = [
-    '**',
-    '*',
-    '/',
-    '_mod',
-    '_div',
-  ]
-
   const UNARY_OPERATOR = [
     '_not',
     '~'
@@ -169,7 +161,6 @@ module.exports = function(hljs) {
     operator: [
       ...RELATIONAL_OPERATOR,
       ...LOGICAL_OPERATOR,
-      ...ARITHMETIC_OPERATOR,
       ...UNARY_OPERATOR
     ],
     built_in: BUILT_INS,
@@ -203,7 +194,26 @@ module.exports = function(hljs) {
 
   const ASSIGNMENT = {
     scope: 'operator',
-    begin: /<<|\^<<|_and<<|_andif<<|_or<<|_orif<<|_xor<<|\*\*<<|\*\*\^<<|\*<<|\*?\^<<|\/<<|\/\^<<|_mod<<|_div<<|-\^?<<|\+<<|\+\^<</
+    variants: [
+      { begin: /<</ },
+      { begin: /\^<</ },
+      { begin: /_and<</ },
+      { begin: /_andif<</ },
+      { begin: /_or<</ },
+      { begin: /_orif<</ },
+      { begin: /_xor<</ },
+      { begin: /\*\*<</ },
+      { begin: /\*\*\^<</ },
+      { begin: /\*<</ },
+      { begin: /\*?\^<</ },
+      { begin: /\/<</ },
+      { begin: /\/\^<</ },
+      { begin: /_mod<</ },
+      { begin: /_div<</ },
+      { begin: /-\^?<</ },
+      { begin: /\+<</ },
+      { begin: /\+\^<</ }
+    ],
   };
 
   const RETURN = {
@@ -268,25 +278,38 @@ module.exports = function(hljs) {
       /(?:_iter\s+)?/,
       /_method/,
       /\s+/,
-      /[a-zA-Z_][a-zA-Z0-9_]*/,
-      /(?:\.[a-zA-Z_][a-zA-Z0-9_]*)?/
+      /(\|[a-zA-Z_][a-zA-Z0-9_]*\|)|([a-zA-Z_][a-zA-Z0-9_]*)/,
+      /\./,
+      /(\|[a-zA-Z_][a-zA-Z0-9_]*\|)|([a-zA-Z_][a-zA-Z0-9_]*)/,
     ],
     scope: {
       4: 'keyword',
       6: 'title.class',
-      7: 'title.function'
+      7: 'punctuation',
+      8: 'title.function'
     }
   };
 
   const CHARACTER = {
     scope: 'symbol',
-    begin: /%(\|[a-zA-Z_?!][a-zA-Z0-9_?!]*\||[a-zA-Z][a-zA-Z0-9_?!]*|.| )/
+    begin: /%([a-zA-Z][a-zA-Z0-9_?!]*|.| )/,
   };
 
   const REGEX = {
     scope: 'regexp',
     begin: /\/(?!\/)(?:\\.|[^\\\/\n])+\/[qisdlmuCX]*/,
     relevance: 0
+  };
+
+  const ARITHMETIC_OPERATOR = {
+    scope: 'operator',
+    variants: [
+      { begin: /\*\*/ },
+      { begin: /\*/ },
+      { begin: /\\/ },
+      { begin: '_mod' },
+      { begin: '_div' }
+    ]
   };
 
   const PUNCTUATION = {
@@ -317,6 +340,7 @@ module.exports = function(hljs) {
       METHOD_DECLARATION,
       CHARACTER,
       REGEX,
+      ARITHMETIC_OPERATOR,
       PUNCTUATION
     ]
   };

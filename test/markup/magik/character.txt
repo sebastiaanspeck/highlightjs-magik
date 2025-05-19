@@ -1,6 +1,11 @@
 %a
 %.
 %,
-%space
-%tab
+%-
+%?
+%/
+%|
 % 
+%space
+%newline
+%tab
