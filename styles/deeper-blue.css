@@ -1,0 +1,130 @@
+/*
+ * Deeper Blue - a highlight.js theme.
+ *
+ * Ported from the Prism theme of the same name (themes/prism-deeper-blue.css in
+ * sebastiaanspeck/prism), keeping its colours and block layout. Only the
+ * selectors changed: Prism's `.token.*` classes have highlight.js equivalents.
+ *
+ * The theme is scoped under `.hljs`. Block rules repeat the class as an
+ * attribute (`pre.hljs[class]`) only to out-rank host stylesheets that nest a
+ * container, such as `.page-contents .hljs`; a bare `pre.hljs` loses to those.
+ */
+
+pre.hljs[class],
+code.hljs[class] {
+    color: #ccc;
+    background: none;
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+    font-size: 0.65rem;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+
+    tab-size: 4;
+
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
+
+/* Code blocks */
+pre.hljs[class] {
+    margin: .5em 0;
+    overflow: auto;
+    background: #2d2d2d;
+}
+
+/* Inline code */
+:not(pre) > code.hljs[class] {
+    padding: .1em;
+    border-radius: .3em;
+    white-space: normal;
+    background: #2d2d2d;
+}
+
+.hljs .hljs-property {
+    color: #f08080;
+}
+
+.hljs .hljs-title.function_,
+.hljs .hljs-title.function_.invoke__ {
+    color: #daa520;
+}
+
+.hljs .hljs-doctag,
+.hljs .hljs-meta {
+    color: #ffe4b5;
+}
+
+.hljs .hljs-punctuation {
+    opacity: .7;
+}
+
+.hljs .hljs-tag,
+.hljs .hljs-deletion {
+    color: #cccccd;
+}
+
+.hljs .hljs-selector-tag,
+.hljs .hljs-selector-id,
+.hljs .hljs-selector-class,
+.hljs .hljs-selector-attr,
+.hljs .hljs-selector-pseudo {
+    color: #f9ee98;
+}
+
+.hljs .hljs-attr,
+.hljs .hljs-link,
+.hljs .hljs-addition,
+.hljs .hljs-name {
+    color: #8f9d6a;
+}
+
+.hljs .hljs-regexp {
+    color: #e9c062;
+}
+
+.hljs .hljs-comment {
+    color: #7f7f7f;
+}
+
+.hljs .hljs-keyword,
+.hljs .hljs-built_in {
+    color: #00bfff;
+}
+
+.hljs .hljs-variable.language_ {
+    color: #98f5ff;
+}
+
+.hljs .hljs-title.class_,
+.hljs .hljs-literal,
+.hljs .hljs-variable {
+    color: #4eee94;
+}
+
+.hljs .hljs-symbol,
+.hljs .hljs-constant {
+    color: #a2cd5a;
+}
+
+.hljs .hljs-string {
+    color: #deb887;
+}
+
+.hljs .hljs-number,
+.hljs .hljs-operator {
+    color: #ffffff;
+}
+
+.hljs .hljs-strong {
+    font-weight: bold;
+}
+
+.hljs .hljs-emphasis {
+    font-style: italic;
+}

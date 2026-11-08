@@ -42,6 +42,19 @@ hljs.registerLanguage("magik", hljsMagik);
 hljs.highlightAll();
 ```
 
+## Theme
+
+`styles/deeper-blue.css` is a highlight.js port of the Deeper Blue theme the
+grammar was originally written for. Load it after highlight.js and after any
+stylesheet the host already applies:
+
+```html
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/sebastiaanspeck/highlightjs-magik@main/styles/deeper-blue.css">
+```
+
+It ships in the npm package as `highlightjs-magik/styles/deeper-blue.css`.
+
 ## License
 
 Highlight.js for Magik is released under the MIT License. See [LICENSE][1] file for details.

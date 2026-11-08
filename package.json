@@ -12,7 +12,8 @@
     "lint": "eslint src/languages/magik.js"
   },
   "files": [
-    "src/languages/magik.js"
+    "src/languages/magik.js",
+    "styles/deeper-blue.css"
   ],
   "repository": {
     "type": "git",
